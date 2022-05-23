@@ -1,9 +1,11 @@
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
+
+from room.models import Room
 
 from . form import SignUpForm
 
-# Create your views here.
 
 def frontpage(request):
     return render(request, 'core/frontpage.html')
